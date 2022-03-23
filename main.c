@@ -1,6 +1,6 @@
 /*
     County Library System,
-    by, george mbugua,
+    by, George mbugua,
     Feb 2022,
     MIT License,
     C99 Compiler,
@@ -9,24 +9,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int menu();
-void execute_action(int action);
+    int menu();
 
 int main()
 {
     char title[100] = "County Library Management";
-    char status[100] = "welcome george mbugua";
-	execute_action(menu());
-    int action;
+    char status[100] = "welcome George mbugua";
+
+    int v;
 
     printf("\n\n\n\t\t\t   ****************\n\t\t\t%s\n \t\t\t\    %s\n\t\t\t   ****************\n", title, status);
     menu();
-	return 0;
+
+
+
+    return 0;
 }
 
-int menu ()
- {
-    int action;
+int menu () {
+    int v;
 
     printf("Select an action below\n");
     printf("1. Add new Patron\n");
@@ -34,17 +35,10 @@ int menu ()
     printf("3. Add new resources\n");
     printf("4. View all resources\n");
     printf("Your actions: \n");
-    scanf("%d", &action);
-    if(action < 1 || action > 4)
-    {
-    	printf("invalid action\n");
-	}
-	return action;
-}
-void execute_action(int action)
-{
-    printf("Choice is: %d\n", action);
-    switch(action) {
+    scanf("%d", &v);
+
+    printf("Choice is: %d\n", v);
+    switch(v) {
     case 1:
         printf(" Add new Patron\n");
         break;
@@ -61,4 +55,8 @@ void execute_action(int action)
         printf("Wrong Entry.");
 
     }
+
+    return 0;
+
+
 }
